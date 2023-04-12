@@ -129,5 +129,4 @@ public class RpcRegisterManage {
             return new Result<>(ResponseCode.UN_ERROR.getCode(), e.getMessage(), false);
         }
     }
-
 }
