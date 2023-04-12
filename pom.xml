@@ -7,6 +7,16 @@
     <groupId>cn.crowdos</groupId>
     <artifactId>CrowdOS-gateway</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>gateway-admin</module>
+        <module>gateway-assist</module>
+        <module>gateway-center</module>
+        <module>gateway-core</module>
+        <module>gateway-engine</module>
+        <module>gateway-sdk</module>
+        <module>gateway-test</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
