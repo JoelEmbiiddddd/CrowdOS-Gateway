@@ -44,6 +44,8 @@ import java.util.List;
 @RequestMapping("/wg/admin/load")
 public class LoadBalancingManage {
 
+
+
     private Logger logger = LoggerFactory.getLogger(GatewayConfigManage.class);
 
     @Resource
@@ -58,21 +60,17 @@ public class LoadBalancingManage {
         pb.start();
     }
 
-    private static void unTar(TarArchiveInputStream tis, File destFile)
-            throws IOException {
-        TarArchiveEntry tarEntry = null;
-        while ((tarEntry = tis.getNextTarEntry()) != null) {
-            if (tarEntry.isDirectory()) {
-                if (!destFile.exists()) {
-                    destFile.mkdirs();
-                }
+    private static void unTar(TarArchiveInputStream tis,File destFile) throws IOException {
+        TarArchiveEntry entry = null;
+        while ((entry = tis.getNextTarEntry()) != null) {
+            File file = new File(destFile, entry.getName());
+            if (entry.isDirectory()) {
+                file.mkdirs();
             } else {
-                FileOutputStream fos = new FileOutputStream(destFile);
-                IOUtils.copy(tis, fos);
-                fos.close();
+                file.getParentFile().mkdirs();
+                IOUtils.copy(tis, new FileOutputStream(file));
             }
         }
-        tis.close();
     }
 
     /**

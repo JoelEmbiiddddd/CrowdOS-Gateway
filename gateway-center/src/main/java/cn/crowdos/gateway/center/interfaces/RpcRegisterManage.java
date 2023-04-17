@@ -27,6 +27,7 @@ import javax.annotation.Resource;
  * @Email : iHuanglixin@outlook.com
  */
 
+
 public class RpcRegisterManage {
 
     private Logger logger = LoggerFactory.getLogger(RpcRegisterManage.class);
