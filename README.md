@@ -10,7 +10,7 @@
 
 技术栈： 
 
-Dubbo，Nacos，Nginx，Netty，shiro，
+Dubbo,Nacos,Nginx,Netty,shiro,zookeeper,
 
 
 
