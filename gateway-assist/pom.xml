@@ -183,7 +183,7 @@
                 <configuration>
                     <artifactSet>
                         <includes>
-                            <include>cn.bugstack.gateway:api-gateway-core:jar:</include>
+                            <include>cn.crowdos.gateway:api-gateway-core:jar:</include>
                         </includes>
                     </artifactSet>
                 </configuration>
