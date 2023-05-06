@@ -67,7 +67,6 @@ public class ConfigManageService implements IConfigManageService {
         // 2. 查询系统ID对应的系统列表信息
         List<ApplicationSystemVO> applicationSystemVOList = configManageRepository.queryApplicationSystemList(systemIdList);
         // 3. 查询系统下的接口信息
-        // 思考：这里的查询是一个不断地循环的查询，你是否有办法优化下，减少查询次数。
         for (ApplicationSystemVO applicationSystemVO : applicationSystemVOList) {
             List<ApplicationInterfaceVO> applicationInterfaceVOList = configManageRepository.queryApplicationInterfaceList(applicationSystemVO.getSystemId());
             for (ApplicationInterfaceVO applicationInterfaceVO : applicationInterfaceVOList) {

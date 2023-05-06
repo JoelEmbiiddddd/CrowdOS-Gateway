@@ -5,7 +5,6 @@ import java.lang.annotation.*;
 /**
  * @File : ApiProducerClazz.py
  * @Author : LiXin Huang, NWPU
- * @Date : 2023/4/12
  * @Desc : 网关API生产者自定义注解
  * @Email : iHuanglixin@outlook.com
  */

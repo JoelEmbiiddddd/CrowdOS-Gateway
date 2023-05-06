@@ -44,7 +44,7 @@ public class Configuration {
     private final Map<String, ApplicationConfig> applicationConfigMap = new HashMap<>();
     // RPC 注册中心配置项 zookeeper://127.0.0.1:2181
     private final Map<String, RegistryConfig> registryConfigMap = new HashMap<>();
-    // RPC 泛化服务配置项 cn.bugstack.gateway.rpc.IActivityBooth
+    // RPC 泛化服务配置项 cn.crowdos.gateway.rpc.IActivityBooth
     private final Map<String, ReferenceConfig<GenericService>> referenceConfigMap = new HashMap<>();
 
     public Configuration() {
