@@ -21,7 +21,7 @@ Dubbo, Nacos, Nginx, Netty, Shiro, ZooKeeper.
 | 7     | gateway-monitor| Gateway monitoring log: monitoring logs, generating various operation and maintenance reports, automatic alarms, etc. |            |
 | 8     | gateway-test   | Gateway test center: used to test the operation of the gateway. | √          |
 
-**Points to consider for improvement and refactorings:**
+**Points to consider for improvement and refactoring:**
 
 1. Protocol parsing and conversion, how Netty handles this part, what technology stack are you using? PS: 
 2. Service governance; control such as circuit breaking, degradation, flow control, black and white lists. This part can also refer to Istio service mesh.
