@@ -22,6 +22,23 @@ import java.util.concurrent.Future;
  * @Email : iHuanglixin@outlook.com
  */
 
+/**
+ * 测试：
+ * http://localhost:7397/wg/activity/CrowdosA?str=Hello
+ * 参数：
+ * {
+ * "str": "10001"
+ * }
+ * <p>
+ * http://localhost:7397/wg/activity/CrowdosB
+ * 参数：
+ * {
+ * "name":"Crowdos",
+ * "uid":"10001"
+ * }
+ */
+
+
 public class ApiTest {
     private final Logger logger = LoggerFactory.getLogger(ApiTest.class);
     @Test
@@ -33,18 +50,18 @@ public class ApiTest {
         HttpStatement httpStatement01 = new HttpStatement(
                 "crowdos-gateway-test",
                 "cn.crowdos.gateway.rpc.IActivityBooth",
-                "sayHi",
+                "CrowdosA",
                 "java.lang.String",
-                "/ag/activity/sayHi",
+                "/wg/activity/CrowdosA",
                 HttpCommandType.GET,
                 false);
 
         HttpStatement httpStatement02 = new HttpStatement(
                 "crowdos-gateway-test",
                 "cn.crowdos.gateway.rpc.IActivityBooth",
-                "insert",
+                "CrowdosB",
                 "cn.crowdos.gateway.rpc.dto.XReq",
-                "/wg/activity/insert",
+                "/wg/activity/CrowdosB",
                 HttpCommandType.POST,
                 true);
 

@@ -25,7 +25,7 @@ public class ShiroTest {
     @Test
     public void test_auth_service() {
         IAuth auth = new AuthService();
-        boolean validate = auth.validate("xiaoming", "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4aWFvbWluZyIsImV4cCI6MTY4MjMwNDE0MywiaWF0IjoxNjgxNjk5MzQzLCJrZXkiOiJ4aWFvbWluZyJ9.PceRizWaMuZT3IOCNye8YxJphjIoOj7iX3ytYP77KiE");
+        boolean validate = auth.validate("xiaoming", "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4aWFvbWluZyIsImV4cCI6MTY4NDY2OTM2NCwiaWF0IjoxNjg0MDY0NTY0LCJrZXkiOiJ4aWFvbWluZyJ9.LCwDdyPehQJ0fQZbV5VoYI-hNb7pl9Wj5bFEvElqYsQ");
         System.out.println(validate ? "验证成功" : "验证失败");
     }
 

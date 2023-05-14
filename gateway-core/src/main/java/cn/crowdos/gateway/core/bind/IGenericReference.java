@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * @File : IGenericReference.py
  * @Author : LiXin Huang, NWPU
- * @Desc :
+ * @Desc : 定义了一个通用的接口，用于实现动态代理。 即 在网络请求的时候可以进行硬编码，使用$invoke方法进行调用
  * @Email : iHuanglixin@outlook.com
  */
 

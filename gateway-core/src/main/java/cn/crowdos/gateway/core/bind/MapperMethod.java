@@ -24,6 +24,12 @@ public class MapperMethod {
         this.command = configuration.getHttpStatement(uri).getHttpCommandType();
     }
 
+    /**
+     *
+     * @param session 访问请求的会话
+     * @param params 请求参数，即调用RPC的相关信息与参数
+     * @return 返回RPC调用结果
+     */
     public Object execute(GatewaySession session, Map<String, Object> params) {
         Object result = null;
         switch (command) {

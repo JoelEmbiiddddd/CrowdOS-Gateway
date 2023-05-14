@@ -8,7 +8,8 @@ import java.util.Map;
 /**
  * @File : Executor.py
  * @Author : LiXin Huang, NWPU
- * @Desc : 引入执行器，封装服务调用，在session中不应该直接接触到数据源，而应该是执行器，避免更多的信息暴露
+ * @Desc : 1. 引入执行器，封装服务调用，在session中不应该直接接触到数据源，而应该是执行器，避免更多的信息暴露
+ *         2. 定义一个执行器接口，所有的会话请求都通过执行器完成。
  * @Email : iHuanglixin@outlook.com
  */
 

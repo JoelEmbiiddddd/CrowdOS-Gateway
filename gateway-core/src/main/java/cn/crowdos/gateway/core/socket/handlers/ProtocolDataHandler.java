@@ -43,7 +43,9 @@ public class ProtocolDataHandler extends BaseHandler<FullHttpRequest> {
             // 1. 解析请求参数
             RequestParser requestParser = new RequestParser(request);
             String uri = requestParser.getUri();
-            if (null == uri) return;
+            if (null == uri) {
+                return;
+            }
             Map<String, Object> args = requestParser.parse();
 
             // 2. 调用会话服务
