@@ -6,7 +6,7 @@ import cn.crowdos.gateway.core.bind.IGenericReference;
 import java.util.Map;
 
 /**
- * @File : GatewaySession.py
+ * @File : GatewaySession.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 用户处理网关 HTTP 请求
  * @Email : iHuanglixin@outlook.com

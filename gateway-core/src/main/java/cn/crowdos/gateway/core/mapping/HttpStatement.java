@@ -1,7 +1,7 @@
 package cn.crowdos.gateway.core.mapping;
 
 /**
- * @File : HttpStatement.py
+ * @File : HttpStatement.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 网关接口映射信息
  * @Email : iHuanglixin@outlook.com

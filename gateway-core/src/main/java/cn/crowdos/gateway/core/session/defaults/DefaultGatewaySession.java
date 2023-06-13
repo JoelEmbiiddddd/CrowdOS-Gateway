@@ -9,7 +9,7 @@ import cn.crowdos.gateway.core.session.GatewaySession;
 import java.util.Map;
 
 /**
- * @File : DefaultGatewaySession.py
+ * @File : DefaultGatewaySession.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 默认网关会话实现类
  * @Email : iHuanglixin@outlook.com

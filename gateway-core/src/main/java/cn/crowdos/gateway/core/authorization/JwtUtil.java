@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @File : JwtUtil.py
+ * @File : JwtUtil.java
  * @Author : LiXin Huang, NWPU
  * @Desc : JWT（JSON Web Tokens）https://jwt.io/
  * @Email : iHuanglixin@outlook.com

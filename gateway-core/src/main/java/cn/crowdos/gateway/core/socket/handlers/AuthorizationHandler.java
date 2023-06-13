@@ -14,7 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @File : AuthorizationHandler.py
+ * @File : AuthorizationHandler.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 鉴权
  * @Email : iHuanglixin@outlook.com

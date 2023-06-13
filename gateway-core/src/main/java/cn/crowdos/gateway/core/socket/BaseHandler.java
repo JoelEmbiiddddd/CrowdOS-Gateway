@@ -5,7 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 /**
- * @File : BaseHandler.py
+ * @File : BaseHandler.java
  * @Author : LiXin Huang, NWPU
  * @Desc :
  * @Email : iHuanglixin@outlook.com

@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @File : Configuration.py
+ * @File : Configuration.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 会话生命周期配置项
  * @Email : iHuanglixin@outlook.com

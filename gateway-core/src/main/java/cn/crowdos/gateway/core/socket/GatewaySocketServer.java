@@ -17,7 +17,7 @@ import java.util.concurrent.Callable;
 
 
 /**
- * @File : GatewaySocketServer.py
+ * @File : GatewaySocketServer.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 网关会话服务
  * @Email : iHuanglixin@outlook.com

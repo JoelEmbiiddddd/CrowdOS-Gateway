@@ -20,7 +20,7 @@ import java.util.Map;
 
 
 /**
- * @File : ProtocolDataHandler.py
+ * @File : ProtocolDataHandler.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 协议数据处理
  * @Email : iHuanglixin@outlook.com

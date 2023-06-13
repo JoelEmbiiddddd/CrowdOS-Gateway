@@ -13,7 +13,7 @@ import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
 
 /**
- * @File : GatewayChannelInitializer.py
+ * @File : GatewayChannelInitializer.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 会话管道初始化类
  * @Email : iHuanglixin@outlook.com

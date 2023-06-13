@@ -5,7 +5,7 @@ import io.netty.handler.codec.http.*;
 
 
 /**
- * @File : ResponseParser.py
+ * @File : ResponseParser.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 构建结果返回信息
  * @Email : iHuanglixin@outlook.com

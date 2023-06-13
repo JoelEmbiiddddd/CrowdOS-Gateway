@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 /**
- * @File : MapperMethod.py
+ * @File : MapperMethod.java
  * @Author : LiXin Huang, NWPU
  * @Desc :
  * @Email : iHuanglixin@outlook.com

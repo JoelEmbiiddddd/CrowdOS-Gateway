@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @File : SimpleTypeRegistry.py
+ * @File : SimpleTypeRegistry.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 基本类型注册器
  * @Email : iHuanglixin@outlook.com

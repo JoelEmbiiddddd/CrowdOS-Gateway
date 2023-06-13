@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @File : MapperRegistry.py
+ * @File : MapperRegistry.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 泛化调用注册器
  * @Email : iHuanglixin@outlook.com

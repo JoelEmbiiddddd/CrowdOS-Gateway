@@ -9,7 +9,7 @@ import java.util.Map;
 
 
 /**
- * @File : MapperProxy.py
+ * @File : MapperProxy.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 映射代理调用
  * @Email : iHuanglixin@outlook.com

@@ -2,7 +2,7 @@ package cn.crowdos.gateway.core.datasource;
 
 import cn.crowdos.gateway.core.session.Configuration;
 /**
- * @File : DataSourceFactory.py
+ * @File : DataSourceFactory.java
  * @Author : LiXin Huang, NWPU
  * @Desc :
  * @Email : iHuanglixin@outlook.com

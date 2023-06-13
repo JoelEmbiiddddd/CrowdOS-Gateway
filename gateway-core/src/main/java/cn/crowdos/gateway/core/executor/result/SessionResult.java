@@ -1,7 +1,7 @@
 package cn.crowdos.gateway.core.executor.result;
 
 /**
- * @File : SessionResult.py
+ * @File : SessionResult.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 会话结果封装
  * @Email : iHuanglixin@outlook.com

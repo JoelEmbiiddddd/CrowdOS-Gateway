@@ -4,7 +4,7 @@ import cn.crowdos.gateway.core.mapping.HttpStatement;
 import io.netty.util.AttributeKey;
 
 /**
- * @File : AgreementConstants.py
+ * @File : AgreementConstants.java
  * @Author : LiXin Huang, NWPU
  * @Desc :协议参数
  * @Email : iHuanglixin@outlook.com

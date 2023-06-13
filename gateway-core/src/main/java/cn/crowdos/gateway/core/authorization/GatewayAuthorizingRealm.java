@@ -10,7 +10,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 /**
- * @File : GatewayAuthorizingRealm.py
+ * @File : GatewayAuthorizingRealm.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 验证领域
  * @Email : iHuanglixin@outlook.com

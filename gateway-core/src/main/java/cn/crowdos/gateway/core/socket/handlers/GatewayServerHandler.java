@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @File : GatewayServerHandler.py
+ * @File : GatewayServerHandler.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 网络协议处理器
  * @Email : iHuanglixin@outlook.com

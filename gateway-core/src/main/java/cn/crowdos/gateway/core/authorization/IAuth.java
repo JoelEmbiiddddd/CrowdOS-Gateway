@@ -1,7 +1,7 @@
 package cn.crowdos.gateway.core.authorization;
 
 /**
- * @File : IAuth.py
+ * @File : IAuth.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 认证服务接口
  * @Email : iHuanglixin@outlook.com

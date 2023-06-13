@@ -6,7 +6,7 @@ import cn.crowdos.gateway.core.datasource.DataSourceType;
 import cn.crowdos.gateway.core.session.Configuration;
 
 /**
- * @File : UnpooledDataSourceFactory.py
+ * @File : UnpooledDataSourceFactory.java
  * @Author : LiXin Huang, NWPU
  * @Desc :
  * @Email : iHuanglixin@outlook.com

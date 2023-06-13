@@ -9,7 +9,7 @@ import org.apache.dubbo.config.utils.ReferenceConfigCache;
 import org.apache.dubbo.rpc.service.GenericService;
 
 /**
- * @File : DubboConnection.py
+ * @File : DubboConnection.java
  * @Author : LiXin Huang, NWPU
  * @Desc : RPC Dubbo Connection
  * @Email : iHuanglixin@outlook.com

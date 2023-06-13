@@ -10,7 +10,7 @@ import cn.crowdos.gateway.core.session.GatewaySession;
 import cn.crowdos.gateway.core.session.GatewaySessionFactory;
 
 /**
- * @File : DefaultGatewaySessionFactory.py
+ * @File : DefaultGatewaySessionFactory.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 默认网关会话工厂
  * @Email : iHuanglixin@outlook.com

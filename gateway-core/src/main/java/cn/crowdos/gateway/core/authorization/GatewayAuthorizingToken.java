@@ -4,7 +4,7 @@ package cn.crowdos.gateway.core.authorization;
 import org.apache.shiro.authc.AuthenticationToken;
 
 /**
- * @File : GatewayAuthorizingToken.py
+ * @File : GatewayAuthorizingToken.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 验证 Token
  * @Email : iHuanglixin@outlook.com

@@ -12,7 +12,7 @@ import org.apache.dubbo.config.RegistryConfig;
 import org.apache.dubbo.rpc.service.GenericService;
 
 /**
- * @File : UnpooledDataSource.py
+ * @File : UnpooledDataSource.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 无池化的连接池
  * @Email : iHuanglixin@outlook.com

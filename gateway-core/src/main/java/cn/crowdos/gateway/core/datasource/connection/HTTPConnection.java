@@ -7,7 +7,7 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import java.io.IOException;
 
 /**
- * @File : HTTPConnection.py
+ * @File : HTTPConnection.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 封装 http post 请求
  * @Email : iHuanglixin@outlook.com

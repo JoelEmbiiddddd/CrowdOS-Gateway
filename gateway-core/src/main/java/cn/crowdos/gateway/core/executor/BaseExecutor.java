@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 
 /**
- * @File : BaseExecutor.py
+ * @File : BaseExecutor.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 执行器抽象基类
  * @Email : iHuanglixin@outlook.com

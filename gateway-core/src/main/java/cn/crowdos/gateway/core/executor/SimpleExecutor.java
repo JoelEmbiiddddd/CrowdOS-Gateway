@@ -5,7 +5,7 @@ import cn.crowdos.gateway.core.datasource.Connection;
 import cn.crowdos.gateway.core.session.Configuration;
 
 /**
- * @File : SimpleExecutor.py
+ * @File : SimpleExecutor.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 简单执行器
  * @Email : iHuanglixin@outlook.com

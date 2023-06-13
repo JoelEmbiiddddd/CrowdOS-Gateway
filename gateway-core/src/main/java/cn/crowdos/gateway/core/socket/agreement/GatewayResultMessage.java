@@ -1,7 +1,7 @@
 package cn.crowdos.gateway.core.socket.agreement;
 
 /**
- * @File : GatewayResultMessage.py
+ * @File : GatewayResultMessage.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 网关结果封装
  * @Email : iHuanglixin@outlook.com

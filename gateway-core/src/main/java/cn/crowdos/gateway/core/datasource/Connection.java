@@ -1,7 +1,7 @@
 package cn.crowdos.gateway.core.datasource;
 
 /**
- * @File : Connection.py
+ * @File : Connection.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 连接接口
  * @Email : iHuanglixin@outlook.com

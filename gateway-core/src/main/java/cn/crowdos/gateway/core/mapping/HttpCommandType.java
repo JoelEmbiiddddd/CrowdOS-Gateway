@@ -1,7 +1,7 @@
 package cn.crowdos.gateway.core.mapping;
 
 /**
- * @File : HttpCommandType.py
+ * @File : HttpCommandType.java
  * @Author : LiXin Huang, NWPU
  * @Desc : HTTP 调用指令
  * @Email : iHuanglixin@outlook.com

@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @File : MapperProxyFactory.py
+ * @File : MapperProxyFactory.java
  * @Author : LiXin Huang, NWPU
  * @Desc : 泛化调用静态代理工厂
  * @Email : iHuanglixin@outlook.com
