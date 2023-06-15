@@ -39,5 +39,4 @@ public class GatewayChannelInitializer extends ChannelInitializer<SocketChannel>
         line.addLast(new AuthorizationHandler(configuration));
         line.addLast(new ProtocolDataHandler(gatewaySessionFactory));
     }
-
 }
