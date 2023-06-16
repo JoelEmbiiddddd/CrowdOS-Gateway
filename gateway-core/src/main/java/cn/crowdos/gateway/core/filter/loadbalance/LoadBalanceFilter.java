@@ -17,7 +17,6 @@ import java.util.Set;
 
 @FilterAspect(id = LOAD_BALANCE_FILTER_ID, name = LOAD_BALANCE_FILTER_NAME, order = LOAD_BALANCE_FILTER_ORDER)
 public class LoadBalanceFilter implements Filter {
-
     @Override
     public void doFilter(GatewayContext ctx) throws Exception {
         String serviceId = ctx.getUniqueId();

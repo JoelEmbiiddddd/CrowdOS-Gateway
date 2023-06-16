@@ -53,5 +53,4 @@ public class GatewayServerHandler extends BaseHandler<FullHttpRequest> {
         }
 
     }
-
 }

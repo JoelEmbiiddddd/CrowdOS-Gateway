@@ -55,8 +55,8 @@ public class GatewaySocketServer implements Callable<Channel> {
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childHandler(new GatewayChannelInitializer(configuration, gatewaySessionFactory));
             // Docker 容器部署会自动分配IP，所以我们只设定端口即可。
-            // channelFuture = b.bind(new InetSocketAddress(configuration.getHostName(), configuration.getPort())).syncUninterruptibly();
-            channelFuture = b.bind(configuration.getPort()).syncUninterruptibly();
+            channelFuture = b.bind(new InetSocketAddress(configuration.getHostName(), configuration.getPort())).syncUninterruptibly();
+            // channelFuture = b.bind(configuration.getPort()).syncUninterruptibly();
             this.channel = channelFuture.channel();
         } catch (Exception e) {
             logger.error("socket server start error.", e);
