@@ -30,6 +30,19 @@ public class HttpStatement {
     /** 是否鉴权；true = 是、false = 否 */
     private boolean auth;
 
+    /** 重试次数 */
+    private int CurrentRetryTimes;
+
+    public int getCurrentRetryTimes() {
+        return CurrentRetryTimes;
+    }
+
+    public void setCurrentRetryTimes(int currentRetryTimes) {
+        CurrentRetryTimes = currentRetryTimes;
+    }
+
+
+
     public HttpStatement(String application, String interfaceName, String methodName, String parameterType, String uri, HttpCommandType httpCommandType, boolean auth) {
         this.application = application;
         this.interfaceName = interfaceName;

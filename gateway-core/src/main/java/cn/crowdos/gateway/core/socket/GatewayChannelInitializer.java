@@ -3,6 +3,7 @@ package cn.crowdos.gateway.core.socket;
 import cn.crowdos.gateway.core.session.Configuration;
 import cn.crowdos.gateway.core.session.defaults.DefaultGatewaySessionFactory;
 import cn.crowdos.gateway.core.socket.handlers.AuthorizationHandler;
+import cn.crowdos.gateway.core.socket.handlers.FiltersHandler;
 import cn.crowdos.gateway.core.socket.handlers.GatewayServerHandler;
 import cn.crowdos.gateway.core.socket.handlers.ProtocolDataHandler;
 import io.netty.channel.ChannelInitializer;
@@ -37,6 +38,7 @@ public class GatewayChannelInitializer extends ChannelInitializer<SocketChannel>
         line.addLast(new HttpObjectAggregator(1024 * 1024));
         line.addLast(new GatewayServerHandler(configuration));
         line.addLast(new AuthorizationHandler(configuration));
+        line.addLast(new FiltersHandler(configuration));
         line.addLast(new ProtocolDataHandler(gatewaySessionFactory));
     }
 }

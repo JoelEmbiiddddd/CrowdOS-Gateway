@@ -47,14 +47,17 @@ public class GatewaySocketServer implements Callable<Channel> {
 
     @Override
     public Channel call() throws Exception {
+
         ChannelFuture channelFuture = null;
         try {
+            // 创建服务端实例
             ServerBootstrap b = new ServerBootstrap();
             b.group(boss, work)
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG, 128)
+                    // 服务端收到新的请求的时候处理用的
                     .childHandler(new GatewayChannelInitializer(configuration, gatewaySessionFactory));
-            // Docker 容器部署会自动分配IP，所以我们只设定端口即可。
+            // Docker 容器部署会自动分配IP，所以我们只设定端口即可。并进行Netty的异步编程
             channelFuture = b.bind(new InetSocketAddress(configuration.getHostName(), configuration.getPort())).syncUninterruptibly();
             // channelFuture = b.bind(configuration.getPort()).syncUninterruptibly();
             this.channel = channelFuture.channel();

@@ -9,6 +9,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @Email : iHuanglixin@outlook.com
  */
 
+// 在 SpringBoot Starter 的组件开发中，需要使用注解 @ConfigurationProperties("api-gateway") 标记出作为配置的文件类。
+// 在类中添加属性信息，这些属性信息就是最后的配置到 yml 中的配置属性。
 @ConfigurationProperties("api-gateway")
 public class GatewayServiceProperties {
 

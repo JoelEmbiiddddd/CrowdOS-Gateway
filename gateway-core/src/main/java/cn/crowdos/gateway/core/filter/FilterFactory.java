@@ -1,5 +1,10 @@
 package cn.crowdos.gateway.core.filter;
 
+import cn.crowdos.gateway.core.mapping.HttpStatement;
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.http.FullHttpRequest;
+
 /**
  * @File : FilterFactory.java
  * @Author : LiXin Huang, NWPU
@@ -15,7 +20,8 @@ public interface FilterFactory {
      * @return
      * @throws Exception
      */
-    GatewayFilterChain buildFilterChain(GatewayContext ctx) throws Exception;
+    GatewayFilterChain buildFilterChain(ChannelHandlerContext ctx, final Channel channel, FullHttpRequest request,HttpStatement httpStatement) throws Exception;
+
 
     /**
      * 通过过滤器id，获取对应的过滤器

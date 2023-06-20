@@ -3,6 +3,10 @@ package cn.crowdos.gateway.core.filter;
 import java.util.ArrayList;
 import java.util.List;
 import cn.crowdos.gateway.core.filter.GatewayContext;
+import cn.crowdos.gateway.core.mapping.HttpStatement;
+import cn.crowdos.gateway.core.socket.GatewaySocketServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @File : GatewayFilterChain.java
@@ -11,7 +15,10 @@ import cn.crowdos.gateway.core.filter.GatewayContext;
  * @Email : iHuanglixin@outlook.com
  */
 
-public class GatewayFilterChain {
+public class GatewayFilterChain  {
+
+
+    private final Logger logger = LoggerFactory.getLogger(GatewaySocketServer.class);
 
     /**
      * 过滤器集合
@@ -44,7 +51,7 @@ public class GatewayFilterChain {
      * @return
      * @throws Throwable
      */
-    public GatewayContext doFilter(GatewayContext ctx) {
+    public HttpStatement doFilter(HttpStatement ctx) {
         if (filterList.isEmpty()) {
             return ctx;
         }
@@ -54,7 +61,7 @@ public class GatewayFilterChain {
             }
         } catch (Exception e) {
             // 发生异常后处理
-            log.error("执行过滤器发生异常,异常信息：{}", e.getMessage());
+            logger.error("执行过滤器发生异常,异常信息：{}", e.getMessage());
         }
         return ctx;
     }

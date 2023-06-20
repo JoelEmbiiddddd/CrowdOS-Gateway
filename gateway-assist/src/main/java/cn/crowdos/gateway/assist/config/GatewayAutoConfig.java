@@ -36,8 +36,22 @@ import java.util.concurrent.Future;
 @EnableConfigurationProperties(GatewayServiceProperties.class)
 public class GatewayAutoConfig {
 
+    /**
+     * 通过将这些 bean 对象声明为 Spring 的 IoC bean，它们可以在应用程序中被自动注入和使用。
+     * 这样，其他组件可以通过依赖注入的方式获取这些对象，并使用它们提供的功能来完成各种任务。
+     */
+
     private Logger logger = LoggerFactory.getLogger(GatewayAutoConfig.class);
 
+
+    /**
+     * 生成一个 RedisConnection 接口 对象
+     * 在 GatewayAutoConfig 网关服务配置类中，创建一个 Redis 链接的 Bean 对象。
+     * 只不过这个对象在创建的过程中，需要先从网关注册中心拉取 Redis 配置信息，之后完成注册操作。
+     * @param properties
+     * @param gatewayCenterService
+     * @return
+     */
     @Bean
     public RedisConnectionFactory redisConnectionFactory(GatewayServiceProperties properties, GatewayCenterService gatewayCenterService) {
         // 1. 拉取注册中心的 Redis 配置信息
@@ -62,6 +76,14 @@ public class GatewayAutoConfig {
         return new JedisConnectionFactory(standaloneConfig, clientConfig);
     }
 
+
+    /**
+     * 配置监听器容器，注入消息监听器容器，需要设置连接工厂和监听器适配器。并将消息通信Topic与监听器适配器绑定。
+     * @param properties
+     * @param redisConnectionFactory
+     * @param msgAgreementListenerAdapter
+     * @return
+     */
     @Bean
     public RedisMessageListenerContainer container(GatewayServiceProperties properties, RedisConnectionFactory redisConnectionFactory, MessageListenerAdapter msgAgreementListenerAdapter) {
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
@@ -71,16 +93,25 @@ public class GatewayAutoConfig {
         return container;
     }
 
+
+    /**
+     * 配置消息监听适配器，指明消息处理委托对象，以及消息处理方法(最终发布方的消息会被该方法接收)。
+     * @param gatewayApplication
+     * @return
+     */
     @Bean
     public MessageListenerAdapter msgAgreementListenerAdapter(GatewayApplication gatewayApplication) {
         return new MessageListenerAdapter(gatewayApplication, "receiveMessage");
     }
 
+    // 网关信息的拉取，Redis配置的拉取
     @Bean
     public GatewayCenterService registerGatewayService() {
         return new GatewayCenterService();
     }
 
+
+    // 网关注册，网关服务获取
     @Bean
     public GatewayApplication gatewayApplication(GatewayServiceProperties properties, GatewayCenterService registerGatewayService, cn.crowdos.gateway.core.session.Configuration configuration, Channel gatewaySocketServerChannel) {
         return new GatewayApplication(properties, registerGatewayService, configuration, gatewaySocketServerChannel);

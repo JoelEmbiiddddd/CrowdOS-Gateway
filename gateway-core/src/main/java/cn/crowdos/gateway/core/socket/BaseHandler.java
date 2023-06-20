@@ -17,5 +17,5 @@ public abstract class BaseHandler<T> extends SimpleChannelInboundHandler<T>{
         session(ctx, ctx.channel(), msg);
     }
 
-    protected abstract void session(ChannelHandlerContext ctx, final Channel channel, T request);
+    protected abstract void session(ChannelHandlerContext ctx, final Channel channel, T request) throws Exception;
 }

@@ -24,6 +24,15 @@ public class GatewayCenterService {
 
     private Logger logger = LoggerFactory.getLogger(GatewayCenterService.class);
 
+
+    /**
+     * 向注册中心发送注册请求，将网关注册上去
+     * @param address
+     * @param groupId
+     * @param gatewayId
+     * @param gatewayName
+     * @param gatewayAddress
+     */
     public void doRegister(String address, String groupId, String gatewayId, String gatewayName, String gatewayAddress) {
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("groupId", groupId);
@@ -44,6 +53,13 @@ public class GatewayCenterService {
             throw new GatewayException("网关服务注册异常 [gatewayId：" + gatewayId + "] 、[gatewayAddress：" + gatewayAddress + "]");
     }
 
+    /**
+     * 拉取RPC服务地址，信息
+     * @param address
+     * @param gatewayId
+     * @param systemId
+     * @return
+     */
     public ApplicationSystemRichInfo pullApplicationSystemRichInfo(String address, String gatewayId, String systemId) {
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("gatewayId", gatewayId);

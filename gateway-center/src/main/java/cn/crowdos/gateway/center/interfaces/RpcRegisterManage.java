@@ -39,6 +39,8 @@ public class RpcRegisterManage {
     @Resource
     private IMessageService messageService;
 
+
+
     @PostMapping(value = "registerApplication", produces = "application/json;charset=utf-8")
     public Result<Boolean> registerApplication(@RequestParam String systemId,
                                                @RequestParam String systemName,

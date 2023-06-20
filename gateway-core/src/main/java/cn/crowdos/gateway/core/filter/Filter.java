@@ -1,5 +1,7 @@
 package cn.crowdos.gateway.core.filter;
 import cn.crowdos.gateway.core.filter.GatewayContext;
+import cn.crowdos.gateway.core.mapping.HttpStatement;
+
 /**
  * @File : Filter.java
  * @Author : LiXin Huang, NWPU
@@ -15,7 +17,7 @@ public interface Filter {
      * @param ctx
      * @throws Exception
      */
-    void doFilter(GatewayContext ctx) throws Exception;
+    void doFilter(HttpStatement ctx) throws Exception;
 
     /**
      * 通过注解拿到排序

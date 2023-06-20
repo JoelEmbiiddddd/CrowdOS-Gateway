@@ -101,6 +101,11 @@ public class GatewayApplication implements ApplicationContextAware, ApplicationL
         }
     }
 
+
+    /**
+     * 当网关服务助手接收到 Redis 订阅的消息以后，则根据信息进行拉取对应的系统数据。
+     * @param message
+     */
     public void receiveMessage(Object message) {
         logger.info("【事件通知】接收注册中心推送消息 message：{}", message);
         addMappers(message.toString().substring(1, message.toString().length() - 1));
