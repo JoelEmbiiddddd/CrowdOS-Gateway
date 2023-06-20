@@ -3,11 +3,14 @@ package cn.crowdos.gateway.assist.domain.service;
 import cn.crowdos.gateway.assist.GatewayException;
 import cn.crowdos.gateway.assist.common.Result;
 import cn.crowdos.gateway.assist.domain.model.aggregates.ApplicationSystemRichInfo;
+
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +26,6 @@ import java.util.Map;
 public class GatewayCenterService {
 
     private Logger logger = LoggerFactory.getLogger(GatewayCenterService.class);
-
 
     /**
      * 向注册中心发送注册请求，将网关注册上去

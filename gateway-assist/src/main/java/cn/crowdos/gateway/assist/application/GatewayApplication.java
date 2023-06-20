@@ -101,7 +101,6 @@ public class GatewayApplication implements ApplicationContextAware, ApplicationL
         }
     }
 
-
     /**
      * 当网关服务助手接收到 Redis 订阅的消息以后，则根据信息进行拉取对应的系统数据。
      * @param message

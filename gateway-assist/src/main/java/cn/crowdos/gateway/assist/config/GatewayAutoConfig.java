@@ -76,7 +76,6 @@ public class GatewayAutoConfig {
         return new JedisConnectionFactory(standaloneConfig, clientConfig);
     }
 
-
     /**
      * 配置监听器容器，注入消息监听器容器，需要设置连接工厂和监听器适配器。并将消息通信Topic与监听器适配器绑定。
      * @param properties
@@ -109,7 +108,6 @@ public class GatewayAutoConfig {
     public GatewayCenterService registerGatewayService() {
         return new GatewayCenterService();
     }
-
 
     // 网关注册，网关服务获取
     @Bean
