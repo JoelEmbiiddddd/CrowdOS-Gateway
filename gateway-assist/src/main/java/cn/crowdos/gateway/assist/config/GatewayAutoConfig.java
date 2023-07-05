@@ -77,17 +77,23 @@ public class GatewayAutoConfig {
     }
 
     /**
-     * 配置监听器容器，注入消息监听器容器，需要设置连接工厂和监听器适配器。并将消息通信Topic与监听器适配器绑定。
+     * Redis消息监听器容器，注入消息监听器容器，需要设置连接工厂和监听器适配器。并将消息通信Topic与监听器适配器绑定
+     * 这个容器加载了RedisConnectionFactory和消息监听器
+     * 可以添加多个监听不同话题的redis监听器，只需要把消息监听器和相应的消息订阅处理器绑定，该消息监听器
+     * 通过反射技术调用消息订阅处理器的相关方法进行一些业务处理
+
      * @param properties
-     * @param redisConnectionFactory
-     * @param msgAgreementListenerAdapter
+     * @param redisConnectionFactory 适配器
+     * @param msgAgreementListenerAdapter 连接器
      * @return
      */
     @Bean
     public RedisMessageListenerContainer container(GatewayServiceProperties properties, RedisConnectionFactory redisConnectionFactory, MessageListenerAdapter msgAgreementListenerAdapter) {
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
+        // 监听所有库的key过期事件
         container.setConnectionFactory(redisConnectionFactory);
         //  container.addMessageListener(msgAgreementListenerAdapter, new PatternTopic("api-gateway-g4"));
+        // 可以添加多个 messageListener，配置不同的通道
         container.addMessageListener(msgAgreementListenerAdapter, new PatternTopic(properties.getGatewayId()));
         return container;
     }
@@ -95,6 +101,7 @@ public class GatewayAutoConfig {
 
     /**
      * 配置消息监听适配器，指明消息处理委托对象，以及消息处理方法(最终发布方的消息会被该方法接收)。
+     * 这个地方是给messageListenerAdapter 传入一个消息接受的处理器。
      * @param gatewayApplication
      * @return
      */

@@ -33,8 +33,11 @@ public class GatewayChannelInitializer extends ChannelInitializer<SocketChannel>
     @Override
     protected void initChannel(SocketChannel channel) throws Exception {
         ChannelPipeline line = channel.pipeline();
+        //解码器 出站
         line.addLast(new HttpRequestDecoder());
+        //编码器 入站
         line.addLast(new HttpResponseEncoder());
+        //将消息聚合在一起，往后传
         line.addLast(new HttpObjectAggregator(1024 * 1024));
         line.addLast(new GatewayServerHandler(configuration));
         line.addLast(new FiltersHandler(configuration));

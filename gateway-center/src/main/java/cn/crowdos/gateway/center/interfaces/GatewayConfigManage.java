@@ -98,6 +98,7 @@ public class GatewayConfigManage {
             Map<String, List<GatewayServerDetailVO>> gatewayServerDetailMap = gatewayServerDetailVOList.stream()
                     .collect(Collectors.groupingBy(GatewayServerDetailVO::getGroupId));
             Set<String> uniqueGroupIdList = gatewayServerDetailMap.keySet();
+
             // 3.1 Location 信息
             List<LocationVO> locationList = new ArrayList<>();
             for (String name : uniqueGroupIdList) {
@@ -107,6 +108,7 @@ public class GatewayConfigManage {
                 // }
                 locationList.add(new LocationVO("/" + name + "/", "http://" + name + ";"));
             }
+
             // 3.2 Upstream 信息
             List<UpstreamVO> upstreamList = new ArrayList<>();
             for (String name : uniqueGroupIdList) {

@@ -26,7 +26,7 @@ import java.util.Map;
  */
 
 public class FiltersHandler extends BaseHandler<FullHttpRequest> {
-    private final Logger logger = LoggerFactory.getLogger(ProtocolDataHandler.class);
+    private final Logger logger = LoggerFactory.getLogger(FiltersHandler.class);
 
     private final Configuration configuration;
 
